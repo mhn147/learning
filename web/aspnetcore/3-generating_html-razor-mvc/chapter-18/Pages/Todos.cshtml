@@ -1,0 +1,32 @@
+@page
+@model TodosModel
+
+<h1>Add a new todo</h1>
+
+<form asp-page="Todos">
+    <div class="mb-3">
+        <label class="form-label" asp-for="Input.Content"></label>
+        <input class="form-control" asp-for="Input.Content">
+        <span asp-validation-for="Input.Content"></span>
+    </div>
+    <div class="mb-3">
+        <label class="form-label" asp-for="Input.Duration"></label>
+        <input class="form-control" asp-for="Input.Duration">
+        <span asp-validation-for="Input.Duration"></span>
+    </div>
+    <div class="mb-3">
+        <label class="form-label" asp-for="Input.DueTime"></label>
+        <input class="form-control" asp-for="Input.DueTime">
+        <span asp-validation-for="Input.DueTime"></span>
+    </div>
+    <div class="mb-3">
+        <label class="form-label" asp-for="Input.Phone"></label>
+        <input class="form-control" asp-for="Input.Phone">
+        <span asp-validation-for="Input.Phone"></span>
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+
+@section Scripts {
+    <partial name="Shared/_ValidationScriptsPartial" />
+}
